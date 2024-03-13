@@ -1,0 +1,27 @@
+@font-face {
+	font-family: "Arial";
+	src:
+		local("Arial"),
+		url("./fonts/Arial.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Helvetica";
+	src:
+		local("Helvetica"),
+		url("./fonts/Helvetica.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "HelveticaNeue";
+	src:
+		local("HelveticaNeue"),
+		url("./fonts/HelveticaNeue.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "SansSerif";
+	src:
+		local("SansSerif"),
+		url("./fonts/SansSerif.otf") format("truetype");
+}

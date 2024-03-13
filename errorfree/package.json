@@ -1,0 +1,46 @@
+{
+	"name": "older-people-gutenberg-blocks",
+	"version": "0.1.0",
+	"description": "Older People Blocks Gutenberg plugin.",
+	"author": "Aniket Navadiya",
+	"license": "GPL-2.0-or-later",
+	"main": "build/blocks/index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://gitlab.com/aniket6352/older-people-blocks-wp.git"
+	},
+	"keywords": [
+		"wordpress",
+		"gutenberg",
+		"blocks",
+		"gutenberg blocks development",
+		"wordpress gutenberg blocks development",
+		"wordpress gutenberg blocks",
+		"wordpress gutenberg blocks development older-people-gutenberg-blocks"
+	],
+	"prettier": "@wordpress/prettier-config",
+	"stylelint": {
+		"extends": "@wordpress/stylelint-config/scss"
+	},
+	"scripts": {
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start"
+	},
+	"devDependencies": {
+		"@wordpress/eslint-plugin": "^17.7.0",
+		"@wordpress/prettier-config": "^3.7.0",
+		"@wordpress/scripts": "^27.1.0",
+		"@wordpress/stylelint-config": "^21.33.0",
+		"eslint-config-prettier": "^9.1.0"
+	},
+	"dependencies": {
+		"@wordpress/block-editor": "^12.18.2",
+		"@wordpress/components": "^25.16.0",
+		"@wordpress/i18n": "^4.50.0"
+	}
+}
