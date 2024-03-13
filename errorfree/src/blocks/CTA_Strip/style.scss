@@ -1,0 +1,84 @@
+div {
+	box-sizing: border-box;
+}
+
+.wp-block-older-people-gutenberg-blocks-cta-strip {
+	//max-width: 100% !important;
+}
+
+// .strip-container {
+// 	display: flex;
+// 	justify-content: space-between;
+// 	padding: 50px;
+// 	align-items: center;
+// }
+.strip-width-container{
+	display: flex;
+	justify-content: space-between;
+	padding: 50px;
+	align-items: center;
+}
+
+.cta-strip-text-container {
+	width: 60%;
+	padding: 0 10px;
+}
+
+.cta-strip-title {
+	background: none;
+	font-weight: 600;
+}
+
+.cta-strip-text {
+	background: none;
+}
+
+.cta-strip-button {
+	border: 2px solid black;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 10px;
+	height: fit-content;
+	width: 50%;
+	cursor: pointer;
+	text-decoration: none !important;
+}
+
+.cta-strip-button-text {
+	background: none;
+	text-align: center;
+}
+
+.cta-strip-button2 {
+	border: 2px solid black;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 10px;
+	height: fit-content;
+	width: 50%;
+	cursor: pointer;
+	text-decoration: none !important;
+}
+
+.cta-strip-button-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40%;
+}
+
+@media (max-width: 850px) {
+	.strip-width-container {
+		flex-direction: column !important;
+	}
+}
+
+@media (max-width: 600px) {
+	.cta-strip-button-container {
+		flex-direction: column !important;
+		width: 100%;
+	}
+	.cta-strip-text-container {
+		width: 100%;
+	}
+}

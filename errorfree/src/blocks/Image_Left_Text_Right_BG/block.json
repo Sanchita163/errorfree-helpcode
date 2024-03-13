@@ -1,0 +1,105 @@
+{
+	"apiVersion": 2,
+	"name": "older-people-gutenberg-blocks/image-left-text-right-bg",
+	"version": "1.0",
+	"title": "Image Left Text Right BG",
+	"category": "older-people-gutenberg-blocks",
+	"icon": "smiley",
+	"description": "Different Gutenberg blocks serve different purposes (e.g., text, images, buttons).",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"align": ["full", "wide", "center", "left", "right"]
+	},
+	"attributes": {
+		"title_color": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"bg_image_url": {
+			"type": "string",
+			"default": ""
+		},
+		"image_url": {
+			"type": "string",
+			"default": ""
+		},
+		"container_width": {
+			"type": "number",
+			"default": 100
+		},
+		"image_width": {
+			"type": "number",
+			"default": 30
+		},
+		"main_title": {
+			"type": "string",
+			"default": ""
+		},
+		"sub_title": {
+			"type": "string",
+			"default": ""
+		},
+		"text": {
+			"type": "string",
+			"default": ""
+		},
+		"main_title_font_size":{
+			"type":"string",
+			"default":"18"
+		},
+		"main_title_font_weight":{
+			"type": "number",
+			"default": 600
+		},
+		"sub_title_font_size":{
+			"type":"string",
+			"default":"16"
+		},
+		"sub_title_font_weight":{
+			"type": "number",
+			"default": 400
+		},
+		"text_font_size":{
+			"type":"string",
+			"default":"14"
+		},
+		"text_font_weight":{
+			"type": "number",
+			"default": 200
+		},
+		
+		"text_container_bg_color": {
+			"type": "string",
+			"default": "transparent"
+		},
+		"text_container_sub_title_color": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"text_container_text_color": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"button_text": {
+			"type": "string",
+			"default": ""
+		},
+		"button_bg_color": {
+			"type": "string",
+			"default": "#AAC2E3"
+		},
+		"button_text_color": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"button_link": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "older-people-gutenberg-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
