@@ -23,20 +23,19 @@ export default function save({ attributes }) {
 					gridTemplateColumns: `repeat(${data_array.length + 1}, 1fr)`,
 				}}
 			>
-				<div class="quick-link-strip-grid-main-item">
-					<div
-						style={{
-							color: text_color,
-							fontSize: title_font_size,
-							fontWeight: title_font_weight,
-						}}
-						className="quick-link-strip-title"
-					>
-						{main_title}
-					</div>
+				<div
+					style={{
+						minWidth: '15%',
+						color: text_color,
+						fontSize: title_font_size,
+						fontWeight: title_font_weight,
+						wordBreak: 'break-all',
+					}}
+					class="quick-link-strip-grid-main-item"
+				>
+					{main_title}
 				</div>
 				{data_array.map((data, index) => {
-					console.log(data.icon);
 					return (
 						<a
 							href={data.link}
