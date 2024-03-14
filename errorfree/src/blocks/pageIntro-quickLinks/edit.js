@@ -41,6 +41,19 @@ export default function Edit({ attributes, setAttributes }) {
     }
   }, []);
 
+  const updateLink = (newAttributes, index) => {
+    const updatedLinks = [...links];
+    updatedLinks[index] = { ...updatedLinks[index], ...newAttributes };
+    setAttributes({ links: updatedLinks });
+  };
+
+  const scrollToBlock = (anchorName) => {
+    const block = document.getElementById(anchorName);
+    if (block) {
+      block.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <Fragment>
       <InspectorControls>
@@ -157,16 +170,21 @@ export default function Edit({ attributes, setAttributes }) {
               resize: 'vertical', // Allow vertical resizing
             }}
           />
+          
             <InnerBlocks
               allowedBlocks={['core/button']}
               template={[['core/button', { className: 'custom-button-class' }]]}
             />
           </div>
-          <div className="right-column" style={{ backgroundColor: rightColumnBgColor, color: rightColumnTextColor, fontSize: `${rightColumnTextSize}px` }}>
+          <div className="right-column" style={{ backgroundColor: rightColumnBgColor, color: rightColumnTextColor, fontSize: `${rightColumnTextSize}px`, display: 'flow-root'  }}>
             {links.map((link, index) => (
               <Fragment key={index}>
                 <a
                   href={link.url}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToBlock(link.url.substring(1));
+                  }}
                   style={{
                     display: 'block',
                     marginBottom: '10px',
