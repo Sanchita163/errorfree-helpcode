@@ -5,10 +5,7 @@
 	"author": "Aniket Navadiya",
 	"license": "GPL-2.0-or-later",
 	"main": "build/blocks/index.js",
-	"repository": {
-		"type": "git",
-		"url": "git+https://gitlab.com/aniket6352/older-people-blocks-wp.git"
-	},
+	
 	"keywords": [
 		"wordpress",
 		"gutenberg",
