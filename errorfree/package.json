@@ -2,7 +2,7 @@
 	"name": "older-people-gutenberg-blocks",
 	"version": "0.1.0",
 	"description": "Older People Blocks Gutenberg plugin.",
-	"author": "Aniket Navadiya",
+	"author": "Sanchita",
 	"license": "GPL-2.0-or-later",
 	"main": "build/blocks/index.js",
 	
