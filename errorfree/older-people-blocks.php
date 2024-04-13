@@ -38,11 +38,18 @@ add_action('init', __NAMESPACE__ . '\Plugin::init', 20);
 
 function my_custom_block_enqueue_scripts() {
     wp_enqueue_script(
-        'my-custom-block-video-popup-handler', // Handle for the script.
-        plugins_url( 'includes/js/video-popup-handler.js', __FILE__ ), // Path to the script file, relative to the plugin file.
-        array( 'jquery' ), // Dependencies, if any. Assuming jQuery is used here.
-        '1.0.0', // Version number for the script file.
-        true // Specify whether to enqueue the script in the footer. True means yes.
+        'my-custom-block-video-popup-handler',
+        plugins_url( 'includes/js/video-popup-handler.js', __FILE__ ),
+        array( 'jquery' ),
+        '1.0.0',
+        true
+    );
+	wp_enqueue_script(
+        'my-custom-block-slider',
+        plugins_url( 'includes/js/slider.js', __FILE__ ),
+        array( 'jquery' ),
+        '1.0.0',
+        true
     );
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\my_custom_block_enqueue_scripts' );
