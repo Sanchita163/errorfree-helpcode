@@ -37,6 +37,7 @@ class Plugin
 			'Media_Share',
 			'Split_Hoz_Multi',
 			'pageIntro-quickLinks',
+			'Topic_Carousel',
 			// 'Quick_Link_Strip_Prof'
 		];
 	}
