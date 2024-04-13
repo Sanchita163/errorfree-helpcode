@@ -15,3 +15,4 @@ import './blocks/X_Col_Card_Image/index';
 import './blocks/Media_Share/index';
 import './blocks/Split_Hoz_Multi/index';
 import './blocks/pageIntro-quickLinks/index';
+import './blocks/Topic_Carousel/index'
