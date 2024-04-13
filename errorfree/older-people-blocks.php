@@ -4,7 +4,7 @@
  * Plugin Name:       Older People Blocks
  * Description:       Older People Blocks Gutenberg plugin.
  * Version:           1.0
- * Author:            Aniket & Jay
+ * Author:            Ndss Older People Block
  * License:           GPL-2.0-or-later
  */
 
