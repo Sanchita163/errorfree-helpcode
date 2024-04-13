@@ -1,0 +1,40 @@
+.wp-block-older-people-gutenberg-blocks-topic-carousel {
+	max-width: 100% !important;
+}
+.topic-carousel-main {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.topic-carousel-container {
+	display: flex;
+	transition: transform 0.5s ease;
+}
+
+.topic-carousel-box {
+	flex: 0 0 calc(100% / 3 - 20px);
+	text-align: center;
+	margin: 0 10px;
+}
+
+.topic-carousel-main .topic-carousel-button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #333;
+	color: #fff;
+	border: none;
+	border-radius: 100px;
+	cursor: pointer;
+	line-height: 1;
+	padding: 12px 15px;
+}
+
+.topic-carousel-prev {
+	left: 0;
+}
+
+.topic-carousel-next {
+	right: 0;
+}
