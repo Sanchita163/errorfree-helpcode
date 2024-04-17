@@ -11,6 +11,26 @@
 		"anchor": true
 	},
 	"attributes": {
+		"container_width": {
+			"type": "number",
+			"default": 70
+		},
+		"mainTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"mainTitleColor": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"mainTitleWeight": {
+			"type": "string",
+			"default": "600"
+		},
+		"mainTitleFontSize": {
+			"type": "number",
+			"default": 16
+		},
 		"boxArray": {
 			"type": "array",
 			"default": []
