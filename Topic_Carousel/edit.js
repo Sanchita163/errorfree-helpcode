@@ -9,16 +9,21 @@ import {
 import {
 	PanelBody,
 	Button,
-	RangeControl,
-	TextControl,
+	
 } from '@wordpress/components';
 import { useEffect } from 'react';
 import Color_Palette from '../../components/Color_Palette';
 import Font_Control from '../../components/Font_Control';
+import Range_Control from '../../components/Range_Control';
 
 export default function Edit({ attributes, setAttributes }) {
 	const blockProps = useBlockProps();
 	const {
+		container_width,
+		mainTitle,
+		mainTitleColor,
+		mainTitleWeight,
+		mainTitleFontSize,
 		boxArray,
 		boxColor,
 		titleColor,
@@ -62,10 +67,44 @@ export default function Edit({ attributes, setAttributes }) {
 					title={__('Settings', 'older-people-gutenberg-blocks')}
 					initialOpen={true}
 				>
+					<Range_Control
+						label={'Carousal Container Width'}
+						min={0}
+						max={100}
+						value={container_width}
+						onChange={(value) => {
+							setAttributes({ container_width: value });
+						}}
+					/>
 					<Color_Palette
 						label={'Box Background Color'}
 						value={boxColor}
 						onChange={(value) => setAttributes({ boxColor: value })}
+					/>
+					<Color_Palette
+						label={'Main Title Text Color'}
+						value={mainTitleColor}
+						onChange={(value) =>
+							setAttributes({ mainTitleColor: value })
+						}
+					/>
+					<Font_Control
+						label={'Main Title Text'}
+						show={['size', 'weight']}
+						size={{
+							min: 10,
+							max: 24,
+							value: mainTitleFontSize,
+						}}
+						weight={{
+							value: mainTitleWeight,
+						}}
+						onChangeWeight={(value) => {
+							setAttributes({ mainTitleWeight: value });
+						}}
+						onChangeSize={(value) => {
+							setAttributes({ mainTitleFontSize: value });
+						}}
 					/>
 					<Color_Palette
 						label={'Title Text Color'}
@@ -149,12 +188,33 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 			</InspectorControls>
+
+			<PlainText
+						className="main-title"
+						value={mainTitle}
+						style={{
+							color: mainTitle,
+							fontSize: mainTitleFontSize,
+							fontWeight: mainTitleWeight,
+							// width: container_width + '%',
+								padding: '0 20px 0 20px',
+						}}
+						placeholder={__(
+							'Headline',
+							'older-people-gutenberg-blocks'
+						)}
+						onChange={(e) => {
+							setAttributes({ mainTitle: e });
+						}}
+					/>
 			<div
 				style={{
 					display: 'grid',
 					gridTemplateColumns: '33.33% 33.33% 33.33%',
+					width: container_width + '%'
 				}}
 			>
+				
 				{boxArray.map((item, index) => {
 					return (
 						<div
