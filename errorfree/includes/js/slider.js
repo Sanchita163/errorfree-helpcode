@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	nextBtn.addEventListener('click', function () {
 		slideIndex = Math.min(
 			slideIndex + 1,
-			slideContainer.children.length - 3
+			slideContainer.children.length - 1
 		);
 		updateSlidePosition();
 	});
@@ -24,4 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		slideWidth = slideWidth + 20;
 		slideContainer.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
 	}
+	
 });
+
