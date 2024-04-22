@@ -31,7 +31,6 @@
   text-decoration: none;
   display: inline-block;
   /* Additional styles for the left button */
-  
   color: #ffffff;
 }
 
@@ -41,6 +40,12 @@
   padding: 20px;
   background-color: #7895d1;
   border-radius: 5px;
+}
+
+/* Styling the right column title */
+.right-column h3 {
+  margin-bottom: 1em;
+  color: #ffffff; /* Default color for the right column title */
 }
 
 .right-column ul {
@@ -98,10 +103,7 @@
   .left-column a, .right-column .add-link-button {
     padding: 8px 16px; /* Smaller padding for smaller devices */
   }
-  .left-column{
-    width: 100% !important;
-  }
-  .right-column{
-    width: 100% !important;
+  .left-column, .right-column {
+    width: 100% !important; /* Force full width on smaller devices */
   }
 }
