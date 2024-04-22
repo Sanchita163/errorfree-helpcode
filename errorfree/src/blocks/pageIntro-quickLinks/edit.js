@@ -20,6 +20,9 @@ export default function Edit({ attributes, setAttributes }) {
     title = 'Daily Management',
     titleColor = '#080E7C',
     titleFontSize,
+    rightColumnTitle, // Added right column title attribute
+    rightColumnTitleColor, // Added right column title color attribute
+    rightColumnTitleFontSize, // Added right column title font size attribute
     paragraph = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     paragraphColor,
     paragraphFontSize,
@@ -79,8 +82,17 @@ export default function Edit({ attributes, setAttributes }) {
             min={12}
             max={100}
           />
+          {/* Add range control for right column title font size */}
+          <RangeControl
+            label={__('Right Column Title Font Size', 'text-domain')}
+            value={rightColumnTitleFontSize}
+            onChange={(value) => setAttributes({ rightColumnTitleFontSize: value })}
+            min={14}
+            max={100}
+          />
         </PanelBody>
         <PanelBody title={__('Color Settings', 'text-domain')} initialOpen={true}>
+          {/* Include panel color settings for right column title color */}
           <PanelColorSettings
             title={__('Title Color', 'text-domain')}
             initialOpen={true}
@@ -94,6 +106,11 @@ export default function Edit({ attributes, setAttributes }) {
                 value: paragraphColor,
                 onChange: (color) => setAttributes({ paragraphColor: color }),
                 label: __('Paragraph Color', 'text-domain'),
+              },
+              {
+                value: rightColumnTitleColor,
+                onChange: (color) => setAttributes({ rightColumnTitleColor: color }),
+                label: __('Right Column Title Color', 'text-domain'),
               },
               {
                 value: rightColumnBgColor,
@@ -159,24 +176,32 @@ export default function Edit({ attributes, setAttributes }) {
               style={{ color: titleColor, fontSize: `${titleFontSize}px` }}
             />
             <textarea // Use textarea for paragraph
-            value={paragraph}
-            onChange={(event) => setAttributes({ paragraph: event.target.value })}
-            placeholder={__('Paragraph...', 'text-domain')}
-            style={{
-              color: paragraphColor,
-              fontSize: `${paragraphFontSize}px`,
-              width: '100%', // Ensure full width
-              minHeight: '100px', // Set minimum height to prevent text cutoff
-              resize: 'vertical', // Allow vertical resizing
-            }}
-          />
-          
+              value={paragraph}
+              onChange={(event) => setAttributes({ paragraph: event.target.value })}
+              placeholder={__('Paragraph...', 'text-domain')}
+              style={{
+                color: paragraphColor,
+                fontSize: `${paragraphFontSize}px`,
+                width: '100%', // Ensure full width
+                minHeight: '100px', // Set minimum height to prevent text cutoff
+                resize: 'vertical', // Allow vertical resizing
+              }}
+            />
             <InnerBlocks
               allowedBlocks={['core/button']}
               template={[['core/button', { className: 'custom-button-class' }]]}
             />
           </div>
           <div className="right-column" style={{ backgroundColor: rightColumnBgColor, color: rightColumnTextColor, fontSize: `${rightColumnTextSize}px`, display: 'flow-root'  }}>
+            {/* Include right column title */}
+            <RichText
+              tagName="h3"
+              value={rightColumnTitle}
+              onChange={(value) => setAttributes({ rightColumnTitle: value })}
+              placeholder={__('Right Column Title...', 'text-domain')}
+              style={{ color: rightColumnTitleColor, fontSize: `${rightColumnTitleFontSize}px` }}
+            />
+            {/* Render links in the right column */}
             {links.map((link, index) => (
               <Fragment key={index}>
                 <a
