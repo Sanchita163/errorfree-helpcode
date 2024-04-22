@@ -5,6 +5,9 @@ export default function save({ attributes }) {
     title,
     titleColor,
     titleFontSize,
+    rightColumnTitle, // Added right column title attribute
+    rightColumnTitleColor, // Added right column title color attribute
+    rightColumnTitleFontSize, // Added right column title font size attribute
     paragraph,
     paragraphColor,
     paragraphFontSize,
@@ -25,6 +28,8 @@ export default function save({ attributes }) {
           <InnerBlocks.Content />
         </div>
         <div className="right-column" style={{ backgroundColor: rightColumnBgColor, padding: '20px', color: rightColumnTextColor, float: 'right', width: '35%' }}>
+          {/* Include right column title */}
+          <h3 style={{ color: rightColumnTitleColor, fontSize: rightColumnTitleFontSize + 'px', marginBottom: '20px' }}>{rightColumnTitle}</h3>
           <ul className="links-container" style={{ listStyleType: 'none', paddingLeft: 0 }}>
             {links.map((link, index) => (
               <li key={index}>
