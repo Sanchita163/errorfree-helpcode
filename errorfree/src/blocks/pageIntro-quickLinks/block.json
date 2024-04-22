@@ -18,6 +18,18 @@
       "type": "number",
       "default": 24
     },
+    "rightColumnTitle": {
+      "type": "string",
+      "source": "html",
+      "selector": ".right-column h3"
+    },
+    "rightColumnTitleColor": {
+      "type": "string"
+    },
+    "rightColumnTitleFontSize": {
+      "type": "number",
+      "default": 20
+    },
     "paragraph": {
       "type": "string",
       "source": "html",
