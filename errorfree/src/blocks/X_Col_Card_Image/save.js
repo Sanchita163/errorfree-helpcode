@@ -67,17 +67,17 @@ export default function save({ attributes }) {
 							}}
 							className="x-col-card-image-main-container"
 						>
-							<img src={item.image} 
+							<img
+								src={item.image}
 								style={{
-									maxWidth: "100%",
-									height:image_height,
-									objectFit:"cover",
+									maxWidth: '100%',
+									height: image_height,
+									objectFit: 'cover',
 								}}
 							/>
 							<div
 								style={{
 									padding: '10px 20px 20px 20px',
-									
 								}}
 							>
 								<div
@@ -96,24 +96,32 @@ export default function save({ attributes }) {
 										color: description_text_color,
 										fontSize: description_font_size + 'px',
 										fontWeight: description_font_weight,
-										whiteSpace:"pre-wrap"
+										whiteSpace: 'pre-wrap',
 									}}
 								>
 									{item.description}
 								</div>
-								<a
-									className="x-col-card-image-box-button"
+								<div
 									style={{
-										backgroundColor:
-											button_background_color,
-										color: button_text_color,
-										fontSize: button_text_font_size + 'px',
-										fontWeight: button_text_font_weight,
+										display: "flex",
+										justifyContent: "center",
 									}}
-									href={item.link}
 								>
-									{item.buttonText}
-								</a>
+									<a
+										className="x-col-card-image-box-button"
+										style={{
+											backgroundColor:
+												button_background_color,
+											color: button_text_color,
+											fontSize:
+												button_text_font_size + 'px',
+											fontWeight: button_text_font_weight,
+										}}
+										href={item.link}
+									>
+										{item.buttonText}
+									</a>
+								</div>
 							</div>
 						</div>
 					))}
