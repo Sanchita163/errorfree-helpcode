@@ -1,0 +1,33 @@
+{
+	"apiVersion": 2,
+	"name": "older-people-gutenberg-blocks/sanchita-block",
+	"version": "1.0",
+	"title": "Link L Split hoz Media",
+	"category": "older-people-gutenberg-blocks",
+	"icon": "admin-media",
+	"description": "An accordion block with 3 default items. The active accordion opens to the right with 4 media items on the left side and a title on the right side.",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"align" : ["full"]
+		
+	},
+	"attributes": {
+		"accordions": {
+			"type": "array",
+			"default": [
+				{"title": "Accordion 1", "media": ["media1", "media2", "media3", "media4"], "content": "Content for Accordion 1"},
+				{"title": "Accordion 2", "media": ["media5", "media6", "media7", "media8"], "content": "Content for Accordion 2"},
+				{"title": "Accordion 3", "media": ["media9", "media10", "media11", "media12"], "content": "Content for Accordion 3"}
+			]
+		},
+		"activeAccordion": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "older-people-gutenberg-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
